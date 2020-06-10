@@ -1,0 +1,156 @@
+/* The flip box container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-box {
+  background-color: transparent;
+  width: 400px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 101%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-box-front {
+  background-color: #99ccff;
+  color: gray;
+}
+
+/* Style the back side */
+.flip-box-back {
+  background-color: black;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.bg-text {
+		  background-color: rgb(0,0,0); /* Fallback color */
+		  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+		  font-weight: bold;
+		  color:white;
+		  border: 3px solid #f1f1f1;
+		  position: absolute;
+		  top: 50%;
+		  left: 50%;
+		  transform: translate(-50%, -50%);
+		  z-index: 2;
+		  width: 80%;
+		  padding: 50px;
+		  text-align: center;
+		}
+		
+
+
+		/* Three image containers (use 25% for four, and 50% for two, etc) */
+		.column {
+		  float:left;
+		  width:25%;
+		  padding-left:10px;
+		  padding-right:90px;
+		  padding-top:20px;
+		  padding-bottom:30px;
+		}
+
+		/* Clear floats after image containers */
+		.row::before {
+		  content: "";
+		  color:white;
+		  clear: both;
+		  display: table;
+		}
+
+
+
+				/*for nav bar*/
+				.bg-img {
+				  /* The image used */
+				  background-image: url("8.jpg");
+				 
+				height: 500px;
+
+				  /* Center and scale the image nicely */
+				  background-position: center;
+				  background-repeat: no-repeat;
+				  background-size: cover;
+
+				  /* Needed to position the navbar */
+				  position: relative;
+				}
+
+				/* Position the navbar container inside the image */
+				
+				
+				.container {
+				  position: absolute;
+				  margin: 30px;
+				  width: auto;
+				}
+
+				/* The navbar */
+				.topnav {
+				
+				  overflow: hidden;
+				  background-color: #333;
+				}
+
+				/* Navbar links */
+				.topnav a {
+				  float: left;
+				  color: #f2f2f2;
+				  text-align: center;
+				  padding: 14px 16px;
+				  text-decoration: none;
+				  font-size: 17px;
+				}
+
+				.topnav a:hover {
+				  background-color: #ddd;
+				  color: black;
+				}
+
+				
+				
+
+
+.fa:hover {
+    opacity: 0.9;
+}
+
+
+
+
+
+/* Add a card effect for articles */
+.card {
+  background-color: white;
+  padding:30px;
+  margin-top: 20px;
+  margin-bottom:20px;
+  position:right;
+}
+
+
+.fa{
+	padding:21px;
+	
+}
